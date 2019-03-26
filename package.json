@@ -50,6 +50,10 @@
     "eslint-plugin-react": "^7.12.3",
     "jest": "^24.5.0",
     "jest-environment-jsdom-global": "^1.2.0",
+    "redis": "^2.8.0",
     "uglify-js": "^3.4.9"
+  },
+  "dependencies": {
+    "@kevinwang0316/log": "^1.0.1"
   }
 }
