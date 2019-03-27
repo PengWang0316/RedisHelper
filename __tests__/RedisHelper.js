@@ -91,13 +91,16 @@ describe('RedisHelper', () => {
     expect(log.error).not.toHaveBeenCalled();
   });
 
-  test('quit', () => {
-    quit();
-    expect(mockClientReturn.quit).toHaveBeenCalledTimes(1);
-  });
-
   test('getClient', () => {
     const client = getClient();
     expect(client).toBe(mockClientReturn);
+  });
+
+  test('quit', () => {
+    expect(getClient()).not.toBeNull();
+    expect(getClient()).not.toBeUndefined();
+    quit();
+    expect(mockClientReturn.quit).toHaveBeenCalledTimes(1);
+    expect(getClient()).toBeNull();
   });
 });

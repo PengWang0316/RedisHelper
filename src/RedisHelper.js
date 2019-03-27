@@ -54,7 +54,10 @@ export const setAsync = async (key, value) => {
  * Quit the Redis client.
  */
 export const quit = () => {
-  if (client) client.quit();
+  if (client) {
+    client.quit();
+    client = null;
+  }
 };
 
 /**
