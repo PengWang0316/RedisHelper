@@ -26,7 +26,7 @@ createClient('host', 'port', 'password');
 await setAsync('key', 'value');
 
 // Get values
-const value = getAsync('key');
+const value = await getAsync('key');
 
 // Get Redis client
 const client = getClient();
