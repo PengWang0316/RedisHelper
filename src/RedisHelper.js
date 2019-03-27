@@ -56,3 +56,9 @@ export const setAsync = async (key, value) => {
 export const quit = () => {
   if (client) client.quit();
 };
+
+/**
+ * Return the Redis client
+ * @return {object} return the Redis client object.
+ */
+export const getClient = () => client;
